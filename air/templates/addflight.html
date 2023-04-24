@@ -1,0 +1,30 @@
+{% block body %}
+<div class="container-fluid my-4 px-0">
+    <img src="https://source.unsplash.com/1200x400/?airports" class="d-block w-100" alt="...">
+    <div/>
+    <div class="container">
+        <h2 class="text-center"><strong>add flight to schedule</strong></h2>
+        <form method="post" action="/addflights">
+            {% csrf_token %}
+        <div class="mb-3">
+            <label for="Name" class="form-label"><strong>flight name :</strong></label>
+            <input type="Name" class="form-control" id="Name" name="Name" placeholder="Enter flight name">
+            <label for="fd" class="form-label"><strong>flight duration :</strong></label>
+            <input type="text" class="form-control" id="fd" name="fd" placeholder="Enter flightduration">
+        </div>
+        <div class="mb-3">
+            <label for="frm" class="form-label"><strong>From :</strong></label>
+            <input type="text" class="form-control" id="frm" name="frm" placeholder="Enter your location">
+            <label for="destination" class="form-label"><strong>to :</strong></label>
+            <input type="text" class="form-control" id="to" name="to" placeholder="Enter your destination">
+        </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <div>
+            <button>
+           <a href="/">home page</a> 
+            </button>
+          </div>
+
+{% endblock body %}

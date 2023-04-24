@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<div class="container-fluid my-4 px-0">
+    <img src="https://source.unsplash.com/1200x400/?airports" class="d-block w-100" alt="...">
+</div>
+    <div class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <form method="post" action="/contact_">
+        {% csrf_token %}
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Text area</label>
+        <textarea class="form-control" id="desc" rows="3" name = "desc"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div class="container-fluid my-4 px-0">
+        <table class="inner-table" style="width: 100%; background-color: #ffffff;">
+            <tbody>
+            <tr>
+            <th><strong>Location</strong></th>
+            <th><strong>Contact Number</strong></th>
+            </tr>
+            <tr>
+            <td><strong>PAKISTAN / INTERNATIONAL</strong></td>
+            <td>+(92-21)-111-786-786</td>
+            </tr>
+            <tr>
+            <td><strong>Islamabad International Airport</strong></td>
+            <td>+(92-51)-59054000</td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+</div>
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</div>
+
+{% endblock body %}

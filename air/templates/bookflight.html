@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Services{% endblock title %}
+{% block body %}
+<div class="container-fluid my-4 px-0">
+    <img src="https://source.unsplash.com/1200x400/?airports" class="d-block w-100" alt="...">
+    <div/>
+    <div class="container">
+        <h2 class="text-center"><strong>Book A Flight</strong></h2>
+        <form method="post" action="/bookflight">
+            {% csrf_token %}
+        <div class="mb-3">
+            <label for="Name" class="form-label"><strong>Name :</strong></label>
+            <input type="Name" class="form-control" id="Name" name="Name" placeholder="Enter your name">
+            <label for="contact" class="form-label"><strong>contact :</strong></label>
+            <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your name">
+
+        </div>
+        <div class="mb-3">
+            <label for="frm" class="form-label"><strong>From :</strong></label>
+            <input type="text" class="form-control" id="frm" name="frm" placeholder="Enter your location">
+            <label for="destination" class="form-label"><strong>to :</strong></label>
+            <input type="text" class="form-control" id="to" name="to" placeholder="Enter your destination">
+        </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+        <div class="container">
+            <footer class="py-3 my-4">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+              </ul>
+              <p class="text-center text-muted">© 2022 Company, Inc</p>
+            </footer>
+          </div>
+
+{% endblock body %}

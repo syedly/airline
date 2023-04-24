@@ -1,0 +1,16 @@
+<h1>flight schedule</h1>
+</div>
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <table border="1">
+        {% for schedule in schedule %}
+        <td>{{ schedule.id }}</td>
+        <div>{{schedule.name}}</div>
+        <div>{{schedule.duration}}</div>
+        <div>{{schedule.frm}}</div>
+        <div>{{schedule.to}}</div>
+        <div>{{schedule.date}}</div>
+        <td><a href="delete/{{ schedule.id }}">delete</a></td>
+
+    </div>  
+    {% endfor %}  
